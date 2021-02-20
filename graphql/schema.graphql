@@ -1,0 +1,26 @@
+type Query {
+  messages: [Message!]! @aws_api_key @aws_iam @aws_oidc
+}
+
+type Message @aws_api_key @aws_iam @aws_oidc {
+  topic: ID
+  text: String!
+}
+
+input SendMessageInput {
+  topic: ID!
+  text: String!
+}
+type Mutation {
+  sendMessage(message: SendMessageInput!): Message
+    @aws_iam
+}
+type Subscription {
+  onSendMessage(topic: ID): Message @aws_subscribe(mutations: ["sendMessage"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

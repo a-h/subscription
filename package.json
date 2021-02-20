@@ -1,0 +1,42 @@
+{
+  "name": "subscription",
+  "version": "0.1.0",
+  "bin": {
+    "subscription": "bin/subscription.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "deploy": "cdk deploy",
+    "graphql-codegen": "npx graphql-codegen --config codegen.yml"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.88.0",
+    "@aws-cdk/aws-appsync": "^1.88.0",
+    "@aws-cdk/aws-events-targets": "^1.88.0",
+    "@aws-cdk/aws-lambda": "^1.88.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.88.0",
+    "@aws-cdk/core": "^1.88.0",
+    "@graphql-codegen/cli": "^1.20.1",
+    "@graphql-codegen/typescript": "^1.20.2",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "appsync-client": "^2.6.0",
+    "aws-appsync": "^4.0.2",
+    "aws-cdk": "^1.88.0",
+    "aws-lambda": "^1.0.6",
+    "aws-sdk": "^2.838.0",
+    "esbuild": "^0.8.42",
+    "graphql": "^15.5.0",
+    "jest": "^26.4.2",
+    "source-map-support": "^0.5.16",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+  }
+}

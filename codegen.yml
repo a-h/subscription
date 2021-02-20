@@ -1,0 +1,10 @@
+overwrite: true
+schema: ./graphql/schema.graphql
+documents: null
+generates:
+  graphql/types.ts:
+    config:
+      withHooks: true
+    plugins:
+      # Create basic TypeScript types.
+      - typescript
